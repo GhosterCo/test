@@ -1,0 +1,28 @@
+@import '../../scss/mixins.scss';
+
+.profileLink {
+    @include flex-center;
+    align-items: flex-end;
+
+    .ava {
+        overflow: hidden;
+        border-radius: 100%;
+    }
+    
+    .who {
+        #name, #job { line-height: normal; font-style: normal; }
+
+        #name {        
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.14px;
+        }
+
+        #job { 
+            color: #757575;            
+            font-size: 12px;            
+            font-weight: 400;        
+            letter-spacing: 0.12px; 
+        }
+    }
+}

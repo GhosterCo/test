@@ -1,0 +1,20 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+@mixin flex-baseLine {
+    display: flex;
+    align-items: first baseline;            
+    gap: 4px;
+}
+
+@mixin flex-column-beetwen {
+    display: flex;    
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+}
