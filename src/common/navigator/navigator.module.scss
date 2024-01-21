@@ -1,0 +1,54 @@
+@import "../../scss/var.scss";
+@import "../../scss/mixins.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .link {
+    padding: 11px;
+
+    @include flex-center;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      @include flex-center;
+    }
+
+    svg {
+      font-size: 24px;
+      user-select: none;
+    }
+
+    span {
+      user-select: none;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.14px;
+    }
+
+    #arrow {
+      font-size: 16px;
+    }
+  }
+}
+
+.inactive {
+  color: $color-grey;
+  background-color: transparent;
+}
+
+.active {
+  color: $color-white;
+  background-color: $color-purple;
+}
