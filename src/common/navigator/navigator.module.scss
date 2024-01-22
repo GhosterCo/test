@@ -11,9 +11,12 @@
 
     @include flex-center;
     justify-content: space-between;
+    gap: 40px;
 
     border-radius: 8px;
     cursor: pointer;
+
+    transition: all 0.2s linear;
 
     li {
       padding: 0;
@@ -46,9 +49,17 @@
 .inactive {
   color: $color-grey;
   background-color: transparent;
+
+  &:hover {
+    background-color: rgba(226, 236, 249, 0.70);
+  }
 }
 
 .active {
   color: $color-white;
   background-color: $color-purple;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }

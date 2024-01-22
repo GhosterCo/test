@@ -1,0 +1,19 @@
+.burger {
+    height: fit-content;
+    width: fit-content;
+    margin: 20px;
+    padding: 0;
+
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    svg { font-size: 28px; }
+}
+
+@media screen and (1240px <= width) {
+  .burger {
+    display: none;
+  }
+}
