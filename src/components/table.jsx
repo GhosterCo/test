@@ -1,16 +1,18 @@
 "use client";
 
 import ss from "./table.module.scss";
+import Pagination from "@/common/pagination";
 import { listData } from "@/common/userData/listData";
 import { columnsData } from "@/common/userData/columnsData";
-import ReactPaginate from "react-paginate";
 import React, { useState } from "react";
 
 export const Table = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(8);
 
-const[postPerPage,setPostPerPage] = useState(8)
-
-
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentPost = listData.slice(firstPostIndex, lastPostIndex);
 
   return (
     <>
@@ -26,7 +28,7 @@ const[postPerPage,setPostPerPage] = useState(8)
             </tr>
           </thead>
           <tbody>
-            {listData.map((list) => (
+            {currentPost.map((list) => (
               <tr key={list.id}>
                 <td>{list.name}</td>
                 <td>{list.company}</td>
@@ -38,6 +40,12 @@ const[postPerPage,setPostPerPage] = useState(8)
             ))}
           </tbody>
         </table>
+        <Pagination
+          totalPosts={listData.length}
+          postPerPage={postPerPage}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        />
       </div>
     </>
   );
