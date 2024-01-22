@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  .table {
+    border-collapse: collapse;
+    width: 70%;
+    height: 70%;
+    thead {
+      tr {
+        color: #cd1515;
+      }
+    }
+
+    td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+    th {
+      height: 29px;
+    }
+  }
+}
